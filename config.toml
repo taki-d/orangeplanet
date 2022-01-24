@@ -1,3 +1,7 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://orangepla.net/'
+languageCode = 'ja'
+title = 'orangeplanet'
+contentDir = 'post'
+[taxonomies]
+tag = "tags"
+
