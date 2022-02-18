@@ -16,17 +16,25 @@
   </head>
   <body>
     {{ "<!-- _default/baseof.html start -->" | safeHTML }}
-    <div class="container-fluid bg-danger" href="{{ relURL "/" }}">    
-    <div class="page-header" >
-      <h1 class="display-4">orangeplanet
-      </h1>
-    </div>
-    </div>
-    <ul>
-      <li><a href="{{ relURL "/" }}">トップ</a></li>
-      <li><a href="{{ relURL "/article/" }}">記事</a></li>
-      <li><a href="{{ relURL "/tags/" }}">タグ</a></li>
+    
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark mb-3">
+      <a class="navbar-brand" href="/">たき∇の雑記帳</a>
+      
+      <ul class="navbar-nav">
+        <li>
+          <a class="nav-link" href="{{ relURL "/" }}">トップ</a>
+        </li>
+        <li>
+          <a class="nav-link" href="{{ relURL "/article/" }}">記事</a>
+        </li>      
+        <li>
+          <a class="nav-link" href="{{ relURL "/tags/" }}">タグ</a>
+        </li>
     </ul>
+    </nav>
+  
+    
+
     <hr />
     {{ block "main" . }}{{ end }}
     {{ "<!-- _default/baseof.html end -->" | safeHTML }}
