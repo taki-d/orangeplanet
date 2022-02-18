@@ -3,11 +3,11 @@
 {{ end }}
 {{ define "main" }}
 {{ "<!-- _default/single.html start -->" | safeHTML }}
-<ul>
+<div class="metaTag fr mr0">
 {{ range .Params.tags -}}
-  <li><a href="{{ print "/tags/" . | relURL }}/">{{ . }}</a></li>
+  <a class="label" href="{{ print "/tags/" . | relURL }}/">{{ . }}</a>
 {{ end -}}
-</ul>
+</div>
 {{ .Content }}
 {{ "<!-- _default/single.html end -->" | safeHTML }}
 {{ end }}
