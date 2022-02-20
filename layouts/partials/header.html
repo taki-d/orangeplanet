@@ -1,0 +1,18 @@
+<head>
+    <!-- Analytics -->
+    {{ if not .Site.IsServer }}
+      {{ partial "analytics.html" }}
+    {{ end }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ block "title" . }}{{ end }}</title>  
+    
+    {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
+
+    {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+    
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/footer.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/article.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css">
+  </head>

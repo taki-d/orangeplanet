@@ -1,0 +1,33 @@
+{{ define "title" }}
+{{- .Title -}}
+{{ end }}
+{{ define "main" }}
+{{ "<!-- _default/single.html start -->" | safeHTML }}
+
+
+<!-- <div class="row"> -->
+
+<div class="p-5 text-center bg-light">
+  <h1 class="mb-3">{{ .Page.Title }}</h1>
+  <p>
+  <a>tags:</a>
+{{ range .Params.tags -}}
+  <a href="{{ print "/tags/" . | relURL }}/"><span class="badge badge-info">{{ . }}</span></a>
+{{ end -}}
+  </p>
+  <p>Posted on {{ .Page.Date | time.Format ":date_long"  }}</p>
+
+</div>
+
+
+<article class="container col-md-6">
+{{ .Content }}
+</article>
+
+
+<!-- </div> -->
+{{ partial "sidebar.html" . }}
+<!-- </div> -->
+
+{{ "<!-- _default/single.html end -->" | safeHTML }}
+{{ end }}
