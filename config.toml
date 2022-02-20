@@ -1,7 +1,14 @@
 baseURL = 'https://orangepla.net/'
 languageCode = 'ja'
-title = 'orangeplanet'
+title = 'たき∇の雑記帳'
 contentDir = 'post'
+copyright = ''
+hasCJKLanguage = true
+
 [taxonomies]
 tag = "tags"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

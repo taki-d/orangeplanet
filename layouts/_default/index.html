@@ -3,12 +3,36 @@
 {{ end }}
 {{ define "main" }}
 {{ "<!-- _default/index.html start -->" | safeHTML }}
-<h1>{{ .Site.Title }}</h1>
+<div class="col">
+
+<div class="container p-4">
+<h2>最近の投稿</h2>
+</div>
+<div class="container">
 {{ .Content }}
-<ul>
+<!-- <div class="card-deck"> -->
+<div class="card-columns">
 {{ range .Site.RegularPages -}}
-<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <div class="card p-3">
+        <a class="index-anchor" href="{{ .RelPermalink }}"></a>
+        <!-- <div class="panel panel-default"> -->
+            <!-- <img class="card-img-top" src="hoge" alt="image"> -->
+        <!-- </div> -->
+        <div class="panel-body">
+            <h3 class="card-title pull-left" >{{ .Title }}</h3>
+            <span class="panel-meta pull-right"><small>{{ .Date | time.Format ":date_long" }}</small></span>
+        </div>
+        <div class="panel-body">
+            <small>{{ substr .Summary 0 300 }}</small>
+        </div>
+        <div class="panel-footer">
+            <a class="stretched-link pull-right" href="{{ .RelPermalink }}">more...</a>
+        </div>
+    </div>
 {{ end -}}
-</ul>
+</div>
+<!-- </div> -->
+</div>
+</div>
 {{ "<!-- _default/index.html end -->" | safeHTML }}
 {{ end }}

@@ -3,10 +3,26 @@
 {{ end }}
 {{ define "main" }}
 {{ "<!-- _default/list.html start -->" | safeHTML }}
-<ul>
+<div class="container">
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
 {{ range .Pages -}}
-<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+<div class="h-md-250 card box-shadow">
+        <a class="index-anchor" href="{{ .RelPermalink }}"></a>
+        <!-- <div class="panel panel-default"> -->
+            <!-- <img class="card-img-top" src="hoge" alt="image"> -->
+        <!-- </div> -->
+        <h3 class="card-title pull-left" >{{ .Title }}</h3>
+        <span class="panel-meta pull-right"><small>{{ .Date | time.Format ":date_long" }}</small></span>
+        <div class="card-body">
+            <small>{{ substr .Summary 0 300 }}</small>
+        </div>
+            <a class="stretched-link pull-right" href="{{ .RelPermalink }}">more...</a>
+    </div>
+<hr>
 {{ end -}}
-</ul>
+    </div>
+</div>
+</div>
 {{ "<!-- _default/list.html end -->" | safeHTML }}
 {{ end }}

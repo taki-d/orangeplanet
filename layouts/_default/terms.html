@@ -4,10 +4,27 @@
 {{ define "main" }}
 {{ "<!-- _default/terms.html start -->" | safeHTML }}
 {{ .Content }}
-<ul>
+<div class="container p-3">
+<div class="card-columns">
 {{ range .Pages -}}
-<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <div class="card p-3">
+        <a class="index-anchor" href="{{ .RelPermalink }}"></a>
+        <!-- <div class="panel panel-default"> -->
+            <!-- <img class="card-img-top" src="hoge" alt="image"> -->
+        <!-- </div> -->
+        <div class="panel-body">
+            <h3 class="card-title pull-left" >{{ .Title }}</h3>
+        </div>
+        <div class="panel-body">
+            <small>{{ substr .Summary 0 300 }}</small>
+        </div>
+        <div class="panel-footer">
+            <a class="stretched-link pull-right" href="{{ .RelPermalink }}">more...</a>
+        </div>
+    </div>
 {{ end -}}
-</ul>
+</div>
+
+</div>
 {{ "<!-- _default/terms.html end -->" | safeHTML }}
 {{ end }}
