@@ -1,0 +1,11 @@
+
+article h1 {
+    line-height: 1.0;
+    padding-top: .875rem;
+    border-bottom: solid 0.1rem #6594e0;
+    font-size: 2rem;
+}
+article p {
+    margin: 1rem auto;
+    line-height: 1.7rem;
+}
