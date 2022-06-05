@@ -2,6 +2,7 @@
 title: "筑波大学編入体験記"
 date: 2020-05-07T11:39:39+09:00
 tags: ["hello", "world"]
+draft: true
 ---
 この記事は"東京高専プロコンゼミ① Advent Calendar 2019" 8日目の記事です．
 [https://adventar.org/calendars/4321/:embed:cite]
