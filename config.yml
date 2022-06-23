@@ -10,7 +10,7 @@ hasCJKLanguage: true
 permalinks:
   posts: /posts/:title
 
-paginate: 3
+paginate: 6
 
 googleAnalytics: G-QPZP852019
 disqusShortname: orangeplanet
@@ -44,7 +44,7 @@ params:
   # Site Author
   author: Takahiro KINOSHITA
   # Author biography
-  bio: コンピューターと旅行が好きです．
+  bio: コンピューターと旅行が好きなエンジニアです．
   # Site Description, used in HTML meat
   description: たきの雑記帳
 
