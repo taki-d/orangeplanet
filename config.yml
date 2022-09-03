@@ -33,8 +33,6 @@ disqusShortname: orangeplanet
 # Social links in footer, support github,twitter,stackoverflow,facebook
 social:
   # e.g.
-  github: https://github.com/taki-d
-  twitter: https://twitter.com/_nosita
   # stackoverflow: your-github-link
   # facebook: your-facebook-link
 
