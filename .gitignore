@@ -6,3 +6,6 @@
 # node
 /node_modules
 .hugo_build.lock
+
+# macOS
+.DS_Store
